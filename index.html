@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Cassandra Birkbeck">
+    <title>Disney GifTastic</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/dis_icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/gif.js"></script>
+</head>
+<body>
+
+    <!--Header-->
+    <div class = "container">
+        <div class = "row">
+            <div class = col-md-1></div>
+            <div class = col-md-10>
+                <div class="jumbotron">
+                    <h1 class="display-4 text-center" id ="title">Disney GifTastic</h1>
+                    <p class="lead text-center">Disney Gifs to brigthen your day!</p>
+
+                    <p class="text-center">Click on a button to see the magic, or enter a Disney character or term of your own.</p>
+                    <div class= "form-row text-center">
+                        <div class= "col-12">
+                            <a class="btn btn-light btn-lg center-align" id = "musicBtn" href="#" role="button"><i class="far fa-play-circle"></i> Play Music</a>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+            <div class = "col-md-1"></div>
+
+        </div>    
+    </div>
+
+    <!--Button and Gif Area-->
+    <div class = "container">
+        <div id = disneyBtns></div>
+        
+        <br><br>
+        <div class= "row gif-row">
+            <div class = "col-md-10">
+                <div id=gifs></div>
+            </div>
+            <!-- Form for user to add their own character-->
+            <div class = "col-md-2">
+                    <form id="disneyCharacter">	
+
+                            <label for="disney-input" class="input-label">MORE OF: </label>
+                            <input type="text" id="disney-input"><br>
+          
+                            <input id="add-character" type="submit" value="Submit">
+                      </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
