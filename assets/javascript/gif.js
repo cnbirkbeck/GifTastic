@@ -1,7 +1,7 @@
 // document .ready to start the functions after the DOM is ready
 $(document).ready(function(){
     //Variables needed for gifs
-    var characters = ["Belle", "Beast", "Gaston", "Russell", "Carl Fredricksen", "Emperor Kuzco", "Simba", "Maleficent", "Wreck It Ralph", "Vanellope Von Schweetz", "Sadness", "Winnie the Pooh", "Mary Poppins", "Captain Hook", "Judy Hopps", "Ursula"];
+    var topics = ["Belle", "Beast", "Gaston", "Russell", "Carl Fredricksen", "Emperor Kuzco", "Simba", "Maleficent", "Wreck It Ralph", "Vanellope Von Schweetz", "Sadness", "Winnie the Pooh", "Mary Poppins", "Captain Hook", "Judy Hopps", "Ursula"];
     // setting up music 
     const theme = new Audio ("assets/Disney Songs Mashup.mp3");
     // setting music to not play at start
@@ -28,11 +28,11 @@ $(document).ready(function(){
     function createBtns(){
         $("#disneyBtns").empty();
 
-        for (i=0; i< characters.length; i++){
+        for (i=0; i< topics.length; i++){
             var btn = $("<button>");
             btn.addClass("character-btn");
-            btn.attr("data-name", characters[i]);
-            btn.text(characters[i]);
+            btn.attr("data-name", topics[i]);
+            btn.text(topics[i]);
 
             $("#disneyBtns").append(btn);
         };
@@ -44,12 +44,12 @@ $(document).ready(function(){
 
         var character = $("#disney-input").val().trim();
 
-        characters.push(character);
+        topics.push(character);
         $("#disney-input").val("");
 
         createBtns();
 
-        console.log(characters);
+        console.log(topics);
     });
     // call createBtn function to ensure buttons are available to user 
     createBtns();
@@ -69,7 +69,7 @@ $(document).ready(function(){
 
             results= response.data;
 
-            $("#gifs").empty
+            $("#gifs").empty;
 
             for (var i=0; i < results.length; i++){
                 var characterDiv = $("<div>");
